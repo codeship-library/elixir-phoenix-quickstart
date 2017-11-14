@@ -12,8 +12,6 @@ services:
       PGPASSWORD: password
     links:
       - pg_db
-    volumes:
-      - ./app:/app
   pg_db:
     image: postgres:9.6.5
     environment:
