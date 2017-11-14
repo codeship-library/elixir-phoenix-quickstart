@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :hello, Hello.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("PGUSER"),
+  password: System.get_env("PGPASSWORD"),
   database: "hello_test",
-  hostname: "localhost",
+  hostname: System.get_env("PGHOST"),
   pool: Ecto.Adapters.SQL.Sandbox

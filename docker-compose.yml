@@ -1,7 +1,9 @@
 version: '3'
 services:
   app:
-    build: .
+    build:
+      image: codeship/phoenix-tutorial
+      dockerfile: Dockerfile
     command: /bin/bash -c 'mix deps.get && mix ecto.create && mix phx.server'
     ports:
       - "4000:4000"

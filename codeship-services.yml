@@ -1,0 +1,16 @@
+app:
+  build:
+    image: codeship/phoenix-tutorial
+    dockerfile: Dockerfile
+  environment:
+    MIX_ENV: test
+    PGHOST: pg_db
+    PGUSER: postgres
+    PGPASSWORD: password
+  links:
+    - pg_db
+pg_db:
+  image: postgres:9.6.5
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: password

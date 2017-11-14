@@ -1,0 +1,3 @@
+- name: run_mix_test
+  command: /bin/bash -c 'mix deps.get && mix ecto.create && mix test'
+  service: app
