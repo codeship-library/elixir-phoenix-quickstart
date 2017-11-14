@@ -1,6 +1,6 @@
 # Phoenix Tutorial with Codeship Pro
-[Pheoenix framework's up and running example](https://hexdocs.pm/phoenix/up_and_running.html#content) configured for testing on Codeship Pro
+[Phoenix framework's up and running example](https://hexdocs.pm/phoenix/up_and_running.html#content) configured for testing on [Codeship Pro](https://codeship.com/features/pro)
 
 ## Local Set Up
-- `docker-compose up` to run on local machine
-- `jet steps` to run Codeship Pro test steps with our [CLI tool](https://documentation.codeship.com/pro/builds-and-configuration/cli/)
+- Boot up app on local machine -- `docker-compose up`
+- Run a Codeship Pro build on your local machine with our [CLI tool](https://documentation.codeship.com/pro/builds-and-configuration/cli/) -- `jet steps`
