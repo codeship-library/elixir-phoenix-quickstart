@@ -2,5 +2,5 @@
 # The build passes as long as every test step returns with a non-zero exit code.
 # See here for more: https://documentation.codeship.com/pro/builds-and-configuration/steps/
 - name: run_mix_test
-  command: /bin/bash -c 'mix deps.get && mix ecto.create && mix test'
-  service: app # our test step will run on an instance of the `app` service that we've defined in the `codeship-services.yml` file
+  command: /bin/bash -c 'mix deps.get && mix ecto.create && mix test' # bash wrapper not required unless passing along env variables or combining commands
+  service: app # our command will run on an instance of the `app` service that we've defined in the `codeship-services.yml` file
