@@ -2,7 +2,7 @@ version: '3'
 services:
   app:
     build: .
-    command: /bin/bash -c 'mix deps.get && mix ecto.create && mix phx.server'
+    command: /bin/bash -c 'sleep 5 && mix ecto.create && mix phx.server'
     ports:
       - "4000:4000"
     environment:
