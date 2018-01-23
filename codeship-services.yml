@@ -6,12 +6,12 @@ app:
     dockerfile: Dockerfile
   environment:
     MIX_ENV: test
-    PGHOST: pg_db
+    PGHOST: pg-db
     PGUSER: postgres
     PGPASSWORD: password
   depends_on:
-    - pg_db
-pg_db:
+    - pg-db
+pg-db:
   image: postgres:9.6.5
   environment:
     POSTGRES_USER: postgres
