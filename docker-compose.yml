@@ -2,18 +2,18 @@ version: '3'
 services:
   app:
     build: .
-    command: /bin/bash -c 'sleep 5 && mix ecto.create && mix phx.server'
+    command: /bin/bash -c 'mix ecto.create && mix phx.server'
     ports:
       - "4000:4000"
     environment:
       MIX_ENV: dev
-      PGHOST: pg_db
+      PGHOST: pg-db
       PGUSER: postgres
       PGPASSWORD: password
     links:
-      - pg_db
-  pg_db:
-    image: postgres:9.6.5
+      - pg-db
+  pg-db:
+    image: healthcheck/postgres:alpine
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password

@@ -12,7 +12,7 @@ app:
   depends_on:
     - pg-db
 pg-db:
-  image: postgres:9.6.5
+  image: healthcheck/postgres:alpine
   environment:
     POSTGRES_USER: postgres
     POSTGRES_PASSWORD: password
