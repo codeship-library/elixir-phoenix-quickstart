@@ -13,7 +13,7 @@ services:
     links:
       - pg-db
   pg-db:
-    image: healthcheck/postgres
+    image: healthcheck/postgres:alpine
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
